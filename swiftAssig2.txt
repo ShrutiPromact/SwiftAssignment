@@ -1,0 +1,18 @@
+var pmDict:[Int:String] = [1998:"Atal Bihari Vajpayee", 2014:"Narendra Modi", 2004:"Manmohan Singh"]
+      for pm in pmDict{
+          if(pm.key==2004)
+          {
+              print(pm.key,pm.value)
+          }
+       }
+	   
+//(2.)    
+print(" ")
+ pmDict[2018] = "modi"
+ 
+ //(3.)
+let dictValDec = pmDict.sorted(by: { $0.key > $1.key })
+//print(dictValDec)
+for item in dictValDec {
+    print("key:\(item.key) value:\(item.value)")
+}

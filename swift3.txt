@@ -1,0 +1,52 @@
+class Employee
+{
+	let Name: String
+	let Id: Int
+	let Designation: String
+	let Experience: Int
+	var Annual_salary: Int
+	let Joining_Date: String
+	let basicSalary: Int
+	func salCalculate(Experience: Int,basicSalary: Int) {}
+   
+	
+	init( ) {
+       self.Name=""
+       self.Id=0
+       self.Designation=""
+       self.Joining_Date=""
+		self.Experience = 0
+		self.Annual_salary = 0
+		self.basicSalary = 0
+      }	
+	
+}
+
+class HR : Employee
+{ 
+	 override func salCalculate(Experience: Int,basicSalary: Int) 
+    {
+    	 Annual_salary = basicSalary + (1000 * Experience)
+		print("HR have :\(Annual_salary) as basic salary and having \(Experience)year exp")
+    }
+}
+
+class Developer: Employee
+{	
+    override func salCalculate(Experience: Int,basicSalary: Int)
+
+    {
+
+    	Annual_salary = basicSalary + (2000 * Experience)
+		print("Developer have :\(Annual_salary) as basic salary and having \(Experience)year exp")
+
+    }
+   
+}
+    var obj1 = HR()
+    obj1.salCalculate(Experience: 4,basicSalary: 2000)
+	
+	
+	var obj2 = Developer()
+	obj2.salCalculate(Experience: 5,basicSalary: 2000)
+	
